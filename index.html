@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Linguasense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars-container">
+        <div id="stars1"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div class="comet"></div>
+    </div>
+
+    <nav class="navbar">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="light-beam"></div>
+
+    <div class="main-container">
+        <div class="header-section">
+            <h1>🎙️ LINGUASENSE</h1>
+            <h3 class="subtitle">MULTILINGUAL SPEECH RECOGNITION</h3>
+        </div>
+
+        <div class="card-section">
+            <label for="api-key">Sarvam AI Key</label>
+            <input type="password" id="api-key" placeholder="Enter your secret API key..." class="textbox">
+            <p class="note">Your API key is stored locally and never shared.</p>
+        </div>
+
+        <div class="card-section">
+            <label for="language-code">Language</label>
+            <select id="language-code" class="dropdown">
+                <option value="auto">Auto-Detect Language ❔</option>
+                <option value="en-IN">English (India)</option>
+                <option value="hi-IN">Hindi (India)</option>
+                <option value="bn-IN">Bengali (India)</option>
+                <option value="gu-IN">Gujarati (India)</option>
+                <option value="kn-IN">Kannada (India)</option>
+                <option value="ml-IN">Malayalam (India)</option>
+                <option value="mr-IN">Marathi (India)</option>
+                <option value="pa-IN">Punjabi (India)</option>
+                <option value="ta-IN">Tamil (India)</option>
+                <option value="te-IN">Telugu (India)</option>
+            </select>
+            <p class="note">Supported Formats: WAV, MP3, OGG, WebM</p>
+        </div>
+        
+        <div class="card-section audio-controls">
+            <button id="start-recording" class="audio-button">Start Recording</button>
+            <button id="stop-recording" class="audio-button stop-button" style="display: none;">⏹️ Stop Recording</button>
+            
+            <div id="audio-wave" class="audio-wave" style="display: none;">
+                </div>
+            
+            <div class="file-upload-area">
+                <span>Or, drag & drop an audio file here</span>
+                <label for="audio-file-input" class="file-upload-button">Choose File</label>
+                <input type="file" id="audio-file-input" accept=".wav,.mp3,.ogg,.webm" style="display:none;">
+                <span id="file-name">no file selected</span>
+            </div>
+        </div>
+
+        <div class="card-section">
+            <label for="transcription-output">Transcription</label>
+            <textarea id="transcription-output" readonly class="textbox" rows="10" placeholder="Awaiting audio..."></textarea>
+            <div class="button-group">
+                <button id="clear-transcription" class="action-button">Clear Text</button>
+                <button id="clear-api-key" class="action-button">Clear API Key</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Linguasense. All rights reserved.</p>
+        </div>
+    </div>
+
+    <section id="about" class="about-section" style="display: none;">
+        <h2>About Linguasense</h2>
+        <p>Linguasense is a cutting-edge platform dedicated to providing accurate and efficient multilingual speech recognition. Our mission is to break down language barriers, making communication seamless and accessible for everyone.</p>
+        <p>Leveraging advanced AI models, Linguasense supports a wide array of Indian languages, ensuring high precision in transcription and language detection. We are committed to continuous innovation, enhancing our services to meet the evolving needs of our users.</p>
+        <h3>Our Vision</h3>
+        <p>To be the leading provider of multilingual speech recognition solutions, empowering individuals and businesses to connect globally without linguistic constraints.</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
